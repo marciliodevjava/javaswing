@@ -13,6 +13,7 @@ public class Porteiro extends Thread {
 		this.observers.add(observer);
 	}
 	public void run() {
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
 			int valor = scanner.nextInt();
@@ -26,5 +27,6 @@ public class Porteiro extends Thread {
 				System.out.println("Alarme Falso!");
 			}
 		}
+		
 	}
 }
