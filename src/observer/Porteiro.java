@@ -22,6 +22,7 @@ public class Porteiro extends Thread {
 				// Notificar os observadores
 				for(ChagadaAbiversarianteObserver observer: this.observers) {
 					observer.chegou(observer);
+					
 				} 
 			}else {
 				System.out.println("Alarme Falso!");
