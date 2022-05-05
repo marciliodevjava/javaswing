@@ -13,11 +13,11 @@ public class Porteiro extends Thread {
 		this.observers.add(observer);
 	}
 	public void run() {
-		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
 			int valor = scanner.nextInt();
 			if (valor == 1) {
+				@SuppressWarnings("unused")
 				ChagadaAnivesarianteEvent event = new ChagadaAnivesarianteEvent(new Date());
 				// Notificar os observadores
 				for(ChagadaAbiversarianteObserver observer: this.observers) {
@@ -26,6 +26,8 @@ public class Porteiro extends Thread {
 			}else {
 				System.out.println("Alarme Falso!");
 			}
+			
+			scanner.close();
 		}
 		
 	}
