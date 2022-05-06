@@ -24,6 +24,7 @@ public class Porteiro {
 				EventoChegadaAniversariante evento = new EventoChegadaAniversariante(new Date());
 				//notificar os observadores!
 				oberservadores.stream().forEach(o -> o.chegou(evento));
+				valor = "sair";
 			} else {
 				System.out.println("Alarme falso!");
 			}
