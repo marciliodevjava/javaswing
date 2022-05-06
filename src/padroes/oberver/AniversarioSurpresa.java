@@ -7,6 +7,10 @@ public class AniversarioSurpresa {
 		Namorada namorada = new Namorada();
 		Porteiro porteiro = new Porteiro();
 		porteiro.registrarObservador(namorada);
+		porteiro.registrarObservador(e -> {
+			System.out.println("Ocorreu via Lambda");
+			System.out.println("Ocorreu em: " + e.getMomento());
+		});
 		porteiro.monitorar();
 	}
 }
