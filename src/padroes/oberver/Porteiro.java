@@ -13,7 +13,7 @@ public class Porteiro {
 		oberservadores.add(observador);
 	}
 	
-	public void mnitorar() {
+	public void monitorar() {
 		Scanner entrada = new Scanner(System.in);
 		String valor = "";
 		while(!"sair".equalsIgnoreCase(valor)) {
